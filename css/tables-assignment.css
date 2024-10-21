@@ -96,11 +96,11 @@ th {
     background-color: #f4f4f4;
 }
 
-/* Focus styles for tabbed browsing */
+/* Focus styles for tabbed browsing
 th:focus, td:focus {
     outline: 2px solid #007BFF;
     outline-offset: -2px;
-}
+} */
 
 /* Zebra striping but the first table box is always white background for some reason*/
 tr:nth-child(odd) {
@@ -110,7 +110,6 @@ tr:nth-child(even) {
     color: #DB592A;
 }
 
-/* Responsive table */
 @media (max-width: 600px) {
     table, thead, tbody, th, td, tr {
         display: block;
