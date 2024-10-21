@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair Display&display=swap');
+
+body {
+    /*background: #F0EF1B;*/
+    background: #262626;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18px;
+}
+h1{
+    font-family: "Playfair Display", serif;
+    font-size: 1.7em;
+    color: #DB592A;
+}
+h2{
+    font-family: "Playfair Display", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.5em;
+    color: #DB592A;
+}
+h3{
+    font-family: "Playfair Display", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.2em;
+    color: #DB592A;
+}
+h4{
+    font-family: "Playfair Display", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.1em;
+    color: #DB592A;
+}
+p{
+    line-height: 1.3em;
+    font-size: 1em;
+    color: #DB592A;
+}
+li{
+    background: #f4f4f4;
+    line-height: 1.3em;
+    font-size: 1em;
+    color: #DB592A;
+}
+small{
+    font-size: 0.8em;
+    font-family: Oswald, sans-serif;
+    color: #DB592A;
+}
+caption{
+    line-height: 1.3em;
+    font-size: 1em;
+    color: #DB592A;
+}
+form{
+    line-height: 1.3em;
+    font-size: 1em;
+    color: #DB592A;
+}
+.container{
+    max-width: 960px;
+    margin: 0 auto;
+}
+.sr-only {
+    border: 0;
+    clip: rect(0, 0, 0, 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+  
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1em;
+}
+
+th, td {
+    padding: 0.75em;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #f4f4f4;
+}
+
+/* Focus styles for tabbed browsing */
+th:focus, td:focus {
+    outline: 2px solid #007BFF;
+    outline-offset: -2px;
+}
+
+/* Zebra striping but the first table box is always white background for some reason*/
+tr:nth-child(odd) {
+    background-color: #f9f9f9;
+}
+tr:nth-child(even) {
+    color: #DB592A;
+}
+
+/* Responsive table */
+@media (max-width: 600px) {
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+
+    th, td {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    th {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    tr {
+        margin-bottom: 1em;
+    }
+
+    td {
+        border: none;
+        position: relative;
+        padding-left: 50%;
+    }
+
+    td:before {
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        width: 45%;
+        padding-left: 0.75em;
+        font-weight: bold;
+        white-space: nowrap;
+    }
+}
