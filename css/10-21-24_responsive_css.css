@@ -1,0 +1,127 @@
+body{
+    background-color: yellow;
+}
+
+/*css reset*/
+*,
+*:before,
+*:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3{
+    font-family: serif;
+    font-weight: normal;
+    padding: .2em 0;
+}
+
+p{
+    margin: 1.8em 0;
+    line-height: 1.8em;
+}
+
+header,
+nav,
+main,
+aside,
+footer{
+    padding: 1.5em;
+    border: 1px black solid;
+}
+
+header,
+footer{
+    text-align: center;
+}
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    background: gray;
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-areas: "heady heady heady"
+                         "navver navver navver"
+                         "aside1 mainy aside2"
+                         "aside1 mainy aside2"
+                         "aside1 mainy aside2"
+                         "footy footy footy";
+}
+
+header{
+    grid-area: heady;
+    background: violet;
+}
+nav{
+    grid-area: navver;
+    background: lightblue;
+}
+main{
+    grid-area: mainy;
+    background: lightgreen;
+}
+#aside1{
+    grid-area: aside1;
+    background: lightcoral;
+}
+#aside2{
+    grid-area: aside2;
+    background: lightcoral;
+}
+footer{
+    grid-area: footy;
+    background: lightcyan;
+}
+
+nav ul{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+}
+nav ul li{
+    list-style: none;
+}
+
+@media screen 
+and (min-width: 640px) 
+and (max-width: 900px){
+    .container{
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "heady heady"
+                             "navver navver"
+                             "mainy mainy"
+                             "aside1 aside2"
+                             "footy footy";
+    }
+    
+}
+
+@media screen
+and (max-width: 640px){
+    .container{
+        grid-template-columns: 1fr;
+        grid-template-areas: "heady"
+                             "mainy"
+                             "aside1"
+                             "aside2"
+                             "navver"
+                             "footy";
+    }
+    nav ul{
+        flex-flow: column nowrap;
+        text-align: center;
+    }
+    nav ul li{
+        display: block;
+        padding: 10px 5px;
+        margin: 5px;
+        border: 1px black solid;
+        background: white;
+    }
+}
