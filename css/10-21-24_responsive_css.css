@@ -1,5 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 body{
-    background-color: yellow;
+    background-color: #69a297;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18px;
 }
 
 /*css reset*/
@@ -14,9 +21,10 @@ body{
 h1,
 h2,
 h3{
-    font-family: serif;
-    font-weight: normal;
-    padding: .2em 0;
+    font-family: "Montserrat", serif;
+    font-weight: 100 900;
+    font-style: normal;
+    font-size: 1.2em;
 }
 
 p{
@@ -30,7 +38,7 @@ main,
 aside,
 footer{
     padding: 1.5em;
-    border: 1px black solid;
+    border: 0px black solid;
 }
 
 header,
@@ -56,36 +64,43 @@ footer{
 
 header{
     grid-area: heady;
-    background: violet;
+    background: #69a297;
 }
 nav{
     grid-area: navver;
-    background: lightblue;
+    background: #704e2e;
+    color: white;
 }
 main{
     grid-area: mainy;
-    background: lightgreen;
+    background: #a3c9a8;
 }
 #aside1{
     grid-area: aside1;
-    background: lightcoral;
+    background: #ddd8c4;
 }
 #aside2{
     grid-area: aside2;
-    background: lightcoral;
+    background: #ddd8c4;
 }
 footer{
     grid-area: footy;
-    background: lightcyan;
+    background: #704e2e;
+    color: white;
 }
 
 nav ul{
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-around;
+    /* color: #defff7; */
 }
 nav ul li{
     list-style: none;
+}
+li a{
+    text-decoration: none;
+    color: #b6d1c8;
 }
 
 @media screen 
@@ -123,5 +138,9 @@ and (max-width: 640px){
         margin: 5px;
         border: 1px black solid;
         background: white;
+    }
+    li a{
+        text-decoration: none;
+        color: blue;
     }
 }
