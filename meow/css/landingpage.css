@@ -181,6 +181,6 @@ and (max-width: 640px){
     }
     li a{
         text-decoration: none; 
-        color: blue;
+        color: rgb(105, 202, 250);
     }
 }
