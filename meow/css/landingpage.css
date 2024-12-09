@@ -180,7 +180,7 @@ and (max-width: 640px){
         background: white;
     }
     li a{
-        text-decoration: none;
+        text-decoration: none; 
         color: blue;
     }
 }
