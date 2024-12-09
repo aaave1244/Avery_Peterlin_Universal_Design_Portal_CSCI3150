@@ -122,8 +122,9 @@ main{
 }
 footer{
     grid-area: footy;
-    background: #69a297;
-    color: #050505;
+    border-radius: 15px;
+    background: #704e2e;
+    color: white;
 }
 a{
     color: #000000;
