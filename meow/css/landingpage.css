@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+body{
+    background-color: #69a297; 
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18px;
+}
+
+/*css reset*/
+*,
+*:before,
+*:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1,
+h2{
+    font-family: "Montserrat", serif;
+    font-weight: 100 900;
+    font-style: normal;
+    font-size: 1.2em;
+}
+h3{
+    font-family: "Montserrat", serif;
+    font-weight: 100 900;
+    font-style: normal;
+    font-size: 1.0em;
+}
+
+p{
+    margin: 1.8em 0;
+    line-height: 1.8em;
+}
+
+header,
+nav,
+main,
+aside,
+footer{
+    padding: 1.5em;
+    border: 0px black solid;
+}
+/* aside{
+    border: 1px black solid;
+} */
+
+header,
+footer{
+    text-align: center;
+}
+
+.sr-only {
+    border: 0;
+    clip: rect(0, 0, 0, 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+  
+}
+
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: #000;
+    color: #fff;
+    padding: 8px;
+    z-index: 100;
+    transition: top 0.3s;
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
+.container{
+    max-width: 1250px;
+    margin: 0 auto;
+    background: gray;
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-areas: "heady heady heady"
+                         "navver navver navver"
+                         "mainy mainy aside2"
+                         "mainy mainy aside2"
+                         "mainy mainy aside2"
+                         "footy footy footy";
+}
+
+header{
+    grid-area: heady;
+    background: #69a297;
+}
+nav{
+    grid-area: navver;
+    background: #704e2e;
+    color: white;
+}
+main{
+    grid-area: mainy;
+    background: #69a297;
+}
+#aside1{
+    grid-area: aside1;
+    background: #69a297;
+}
+#aside2{
+    grid-area: aside2;
+    background: #69a297;
+}
+footer{
+    grid-area: footy;
+    background: #69a297;
+    color: white;
+}
+
+nav ul{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    /* color: #defff7; */
+}
+nav ul li{
+    list-style: none;
+}
+li a{
+    text-decoration: none;
+    color: #b6d1c8;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+li a:hover {
+    color: #b6d1c8;
+    background-color: #840404; 
+}
+
+@media screen 
+and (min-width: 640px) 
+and (max-width: 900px){
+    .container{
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "heady heady"
+                             "navver navver"
+                             "mainy aside2"
+                             "footy footy";
+    }
+    
+}
+
+@media screen
+and (max-width: 640px){
+    .container{
+        grid-template-columns: 1fr;
+        grid-template-areas: "heady"
+                             "mainy"
+                             "aside2"
+                             "navver"
+                             "footy";
+    }
+    nav ul{
+        flex-flow: column nowrap;
+        text-align: center;
+    }
+    nav ul li{
+        display: block;
+        padding: 10px 5px;
+        margin: 5px;
+        border: 1px black solid;
+        background: white;
+    }
+    li a{
+        text-decoration: none;
+        color: blue;
+    }
+}
